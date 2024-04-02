@@ -40,7 +40,7 @@ const validate = (data) => {
 		password: passwordComplexity().required().label("Password"),
 		Bio: Joi.string().required().label("Bio"),
 		resume: Joi.string().required().label("Resume Link"),
-		user_id: Joi.string().required().label("user_id"),
+		user_id: Joi.string().length(8).required().label("user_id"),
 	});
 	return schema.validate(data);
 };
