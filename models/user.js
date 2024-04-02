@@ -11,10 +11,10 @@ const userSchema = new mongoose.Schema({
 	Bio: { type: String, required: true },
 	resume: { type: String, required: true },
 	password: { type: String, required: true },
-	user_id: { type: String, required: true},
+	user_id: { type: Number, required: true},
 	connection : [{
 		user_id : {
-		  type : String
+		  type : Number
 		},
 		connected_at : {
 		  type : Date
