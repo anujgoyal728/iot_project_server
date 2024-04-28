@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
 	resume: { type: String, required: true },
 	password: { type: String, required: true },
 	user_id: { type: Number, required: true},
+	image: {type: String, required: true},
 	connection : [{
 		user_id : {
 		  type : Number
@@ -41,6 +42,7 @@ const validate = (data) => {
 		Bio: Joi.string().required().label("Bio"),
 		resume: Joi.string().required().label("Resume Link"),
 		user_id: Joi.string().length(8).required().label("user_id"),
+		image: Joi.string().required().label("Image")
 	});
 	return schema.validate(data);
 };
